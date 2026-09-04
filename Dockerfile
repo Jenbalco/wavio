@@ -10,9 +10,9 @@ WORKDIR /home/frappe/frappe-bench
 # 1. Clean out existing boilerplate apps to prevent link collisions
 RUN rm -rf apps/erpnext apps/frappe
 
-# 2. Pull down core framework and absolute target repositories
+# 2. Pull down core framework and absolute target repositories (Fixed erpnext URL typo)
 RUN git clone --depth 1 --branch version-16 https://github.com/frappe/frappe apps/frappe \
-    && git clone --depth 1 --branch version-16 https://github.com/frapp/erpnext apps/erpnext \
+    && git clone --depth 1 --branch version-16 https://github.com/frappe/erpnext apps/erpnext \
     && git clone --depth 1 --branch v16.15.0 https://github.com/frappe/hrms apps/hrms \
     && git clone --depth 1 --branch version-16 https://github.com/frappe/payments apps/payments \
     && git clone --depth 1 --branch v1.20.3 https://github.com/frappe/ecommerce_integrations apps/ecommerce_integrations \
@@ -60,9 +60,6 @@ USER frappe
 # Re-link your contextual apps inside Stage 2 production Python pathways
 RUN ./env/bin/pip install --quiet legacy-cgi \
     -e apps/hrms \
-    -e apps/crm \
-    -e apps/telephony \
-    -e apps/helpdesk \
     -e apps/payments \
     -e apps/ecommerce_integrations \
     -e apps/lending \
