@@ -1,0 +1,12 @@
+[
+  { "name": "frappe", "url": "https://github.com/frappe/frappe", "branch": "version-16" },
+  { "name": "erpnext", "url": "https://github.com/frappe/erpnext", "branch": "version-16" },
+  { "name": "hrms", "url": "https://github.com/frappe/hrms", "branch": "v16.15.0" },
+  { "name": "payments", "url": "https://github.com/frappe/payments", "branch": "version-16" },
+  { "name": "ecommerce_integrations", "url": "https://github.com/frappe/ecommerce_integrations", "branch": "v1.20.3" },
+  { "name": "lending", "url": "https://github.com/frappe/lending", "branch": "v16.3.0" },
+  { "name": "wiki", "url": "https://github.com/frappe/wiki", "branch": "v3.0.0" },
+  { "name": "print_designer", "url": "https://github.com/frappe/print_designer", "branch": "main" },
+  { "name": "offsite_backups", "url": "https://github.com", "branch": "version-16" },
+  { "name": "raven", "url": "https://github.com/frappe/raven", "branch": "main" }
+]
